@@ -1,0 +1,750 @@
+
+
+
+User 15%, System 22%, IOW 0%, IRQ 1%
+User 14 + Nice 1 + Sys 22 + Idle 60 + IOW 0 + IRQ 0 + SIRQ 1 = 98
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  4  13% R   1672K    752K     root     top             top
+ 1907  1907  1   3% S 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  174  1909  0   1% R  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  847  1322  0   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  486   543  0   1% S 756856K  46216K  fg system   SensorService   system_server
+  847  1275  3   1% S 786656K  81664K  fg system   local_recorder  com.xiaopeng.carspeechservice
+  582   582  0   1% S 731700K  50952K  fg u0_a6    ndroid.systemui com.android.systemui
+  847  1405  3   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+
+
+
+User 15%, System 15%, IOW 0%, IRQ 0%
+User 9 + Nice 1 + Sys 10 + Idle 43 + IOW 0 + IRQ 0 + SIRQ 0 = 63
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  4  22% R   1684K    752K     root     top             top
+ 1907  1907  2   3% S 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   283  2   1% S  85100K   9428K  fg system   EventThread     /system/bin/surfaceflinger
+  172   876  1   1% S  85100K   9428K  fg system   Binder_5        /system/bin/surfaceflinger
+  172   172  3   1% S  85100K   9428K  fg system   surfaceflinger  /system/bin/surfaceflinger
+ 1907  1934  0   1% S 710564K  73264K  bg system   StackTraceColle com.xiaopeng.aiassistant
+ 1907  1944  1   1% S 710564K  73264K  bg system   FrameSequence d com.xiaopeng.aiassistant
+  486   869  3   1% S 756856K  46216K  fg system   gps thread      system_server
+
+
+
+User 7%, System 23%, IOW 0%, IRQ 1%
+User 4 + Nice 1 + Sys 16 + Idle 46 + IOW 0 + IRQ 0 + SIRQ 1 = 68
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  4  17% R   1684K    752K     root     top             top
+ 1907  1907  2   2% S 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   284  3   1% S  85100K   9428K  fg system   EventThread     /system/bin/surfaceflinger
+ 1907  1944  2   1% S 710564K  73264K  bg system   FrameSequence d com.xiaopeng.aiassistant
+19557 19557  2   1% S      0K      0K     root     kworker/u:4     
+  172   189  3   1% S  85100K   9428K  fg system   Binder_2        /system/bin/surfaceflinger
+   63    63  2   1% S      0K      0K     root     ksmd            
+ 2932  2932  0   1% S      0K      0K     root     kworker/u:0     
+
+
+
+User 11%, System 20%, IOW 0%, IRQ 0%
+User 6 + Nice 2 + Sys 14 + Idle 45 + IOW 0 + IRQ 0 + SIRQ 0 = 67
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  4  20% R   1684K    752K     root     top             top
+ 1907  1907  2   2% S 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+ 1907  1944  0   1% S 710564K  73264K  bg system   FrameSequence d com.xiaopeng.aiassistant
+  174  1909  0   1% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  172   172  3   1% S  85100K   9428K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  538   538  2   1% S    896K    428K     root     logcat          /system/bin/logcat
+  847  1405  2   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  847  1322  1   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+
+
+
+User 22%, System 19%, IOW 0%, IRQ 0%
+User 14 + Nice 1 + Sys 13 + Idle 40 + IOW 0 + IRQ 0 + SIRQ 0 = 68
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  20% R   1684K    752K     root     top             top
+ 1907  1907  2   2% S 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+ 1907  1944  2   2% S 710564K  73264K  bg system   FrameSequence d com.xiaopeng.aiassistant
+  847  1322  2   1% R 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  818   834  1   1% S 891392K 126632K  fg system   Binder_1        com.xiaopeng.montecarlo
+ 1735 27010  1   1% S 684268K  26260K  fg system   Binder_7        com.xiaopeng.uploadcarinfo
+  179  1463  2   1% S  93908K  33712K  fg root     918             /system/bin/carservice
+  179  1054  2   1% S  93908K  33712K  fg root     769             /system/bin/carservice
+
+
+
+User 15%, System 15%, IOW 0%, IRQ 0%
+User 10 + Nice 3 + Sys 13 + Idle 56 + IOW 0 + IRQ 0 + SIRQ 0 = 82
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  17% R   1684K    752K     root     top             top
+ 1907  1907  3   2% S 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  818  1527  0   1% S 891392K 126632K  fg system   GPosService     com.xiaopeng.montecarlo
+  488   503  4   1% S   3556K    192K     media_rw sdcard          /system/bin/sdcard
+19557 19557  0   1% S      0K      0K     root     kworker/u:4     
+ 1907  1944  2   1% S 710564K  73264K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 2932  2932  0   1% S      0K      0K     root     kworker/u:0     
+  172   172  3   1% R  85100K   9428K  fg system   surfaceflinger  /system/bin/surfaceflinger
+
+
+
+User 13%, System 16%, IOW 1%, IRQ 0%
+User 10 + Nice 1 + Sys 13 + Idle 56 + IOW 1 + IRQ 0 + SIRQ 0 = 81
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  17% R   1684K    752K     root     top             top
+ 1907  1944  3   2% S 710564K  73264K  bg system   FrameSequence d com.xiaopeng.aiassistant
+   63    63  2   2% S      0K      0K     root     ksmd            
+ 1907  1907  1   2% S 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  847  1405  3   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  847  1322  0   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  847  1275  1   1% S 786656K  81664K  fg system   local_recorder  com.xiaopeng.carspeechservice
+  172   188  1   1% S  85100K   9428K  fg system   DispSync        /system/bin/surfaceflinger
+
+
+
+User 11%, System 14%, IOW 0%, IRQ 0%
+User 8 + Nice 1 + Sys 12 + Idle 60 + IOW 0 + IRQ 0 + SIRQ 0 = 81
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  17% R   1684K    752K     root     top             top
+ 1907  1907  4   2% S 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  818  1529  3   1% S 891392K 126632K  fg system   UDP             com.xiaopeng.montecarlo
+  172   867  0   1% S  85100K   9428K  fg system   Binder_4        /system/bin/surfaceflinger
+ 1907  1934  4   1% S 710564K  73264K  bg system   StackTraceColle com.xiaopeng.aiassistant
+ 1907  1944  3   1% S 710564K  73264K  bg system   FrameSequence d com.xiaopeng.aiassistant
+  847  1322  2   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  582   582  3   1% S 731700K  50952K  fg u0_a6    ndroid.systemui com.android.systemui
+
+
+
+User 10%, System 18%, IOW 0%, IRQ 1%
+User 9 + Nice 1 + Sys 18 + Idle 66 + IOW 0 + IRQ 0 + SIRQ 1 = 95
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  16% R   1684K    752K     root     top             top
+ 1907  1907  4   3% S 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  818   818  0   1% S 891392K 126632K  fg system   peng.montecarlo com.xiaopeng.montecarlo
+  486   829  2   1% S 756856K  46216K  fg system   Thread-71       system_server
+  847  1405  0   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+19557 19557  0   1% S      0K      0K     root     kworker/u:4     
+  486   813  0   1% S 756856K  46216K  fg system   Binder_E        system_server
+  172   172  1   1% S  85100K   9428K  fg system   surfaceflinger  /system/bin/surfaceflinger
+
+
+
+User 10%, System 16%, IOW 0%, IRQ 0%
+User 8 + Nice 1 + Sys 14 + Idle 64 + IOW 0 + IRQ 0 + SIRQ 0 = 87
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  18% R   1684K    752K     root     top             top
+ 1907  1907  4   2% S 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  847  1322  2   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  847  1407  3   1% R 786656K  81664K  fg system   105-local_vad-n com.xiaopeng.carspeechservice
+ 3712  3712  5   1% S      0K      0K     root     ksoftirqd/5     
+  486   869  1   1% S 756856K  46216K  fg system   gps thread      system_server
+  174  1909  0   1% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  510   510  3   1% S   6788K    264K     root     adbd            /sbin/adbd
+
+
+
+User 8%, System 18%, IOW 0%, IRQ 0%
+User 7 + Nice 1 + Sys 17 + Idle 67 + IOW 0 + IRQ 0 + SIRQ 0 = 92
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  16% R   1684K    752K     root     top             top
+ 1907  1907  4   2% R 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+ 2932  2932  0   1% S      0K      0K     root     kworker/u:0     
+  847 14089  1   1% S 786656K  81664K  fg system   Binder_A        com.xiaopeng.carspeechservice
+  847  1405  3   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  510   517  2   1% S   6788K    264K     root     adbd            /sbin/adbd
+ 1907  1944  4   1% S 710564K  73264K  bg system   FrameSequence d com.xiaopeng.aiassistant
+19557 19557  1   1% S      0K      0K     root     kworker/u:4     
+
+
+
+User 14%, System 21%, IOW 0%, IRQ 0%
+User 13 + Nice 2 + Sys 22 + Idle 65 + IOW 0 + IRQ 0 + SIRQ 0 = 102
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  15% R   1684K    752K     root     top             top
+ 1907  1907  6   2% R 710564K  73264K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+ 1907  1944  6   1% S 710564K  73264K  bg system   FrameSequence d com.xiaopeng.aiassistant
+  769  2586  3   0% S 685124K  24796K  fg system   Binder_A        com.xiaopeng.remote.control
+  818  1527  3   0% S 891392K 126632K  fg system   GPosService     com.xiaopeng.montecarlo
+   93    93  0   0% S      0K      0K     root     cfinteractive   
+  179   341  1   0% S  93908K  33712K     root     NcmWorkThread   /system/bin/carservice
+  672   880  2   0% S 682504K  26496K  fg radio    RILReceiver     com.android.phone
+
+
+
+User 8%, System 15%, IOW 0%, IRQ 0%
+User 8 + Nice 1 + Sys 17 + Idle 80 + IOW 1 + IRQ 0 + SIRQ 0 = 107
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  15% R   1684K    752K     root     top             top
+ 1907  1907  6   3% R 718484K  73304K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+   63    63  2   1% S      0K      0K     root     ksmd            
+ 3712  3712  5   0% S      0K      0K     root     ksoftirqd/5     
+  510   510  2   0% S   6788K    264K     root     adbd            /sbin/adbd
+  172   172  3   0% S  85100K   9428K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  847  1401  2   0% S 786656K  81664K  fg system   103-co_processo com.xiaopeng.carspeechservice
+ 1907  1944  4   0% R 718484K  73304K  bg system   FrameSequence d com.xiaopeng.aiassistant
+
+
+
+User 12%, System 18%, IOW 0%, IRQ 0%
+User 14 + Nice 1 + Sys 22 + Idle 82 + IOW 0 + IRQ 0 + SIRQ 0 = 119
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  17% R   1684K    752K     root     top             top
+ 1907  1907  4  15% R 767052K  95636K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  174  1909  0   1% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  510   518  0   0% S   6788K    264K     root     adbd            /sbin/adbd
+  486   714  2   0% S 756856K  46212K  fg system   Binder_6        system_server
+  847  1322  3   0% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  172   283  1   0% S 100296K   9428K  fg system   EventThread     /system/bin/surfaceflinger
+  172   189  6   0% S 100296K   9428K  fg system   Binder_2        /system/bin/surfaceflinger
+
+
+
+User 15%, System 20%, IOW 0%, IRQ 0%
+User 24 + Nice 0 + Sys 32 + Idle 98 + IOW 0 + IRQ 0 + SIRQ 0 = 154
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  11% R   1684K    752K     root     top             top
+ 1907  1907  4   3% R 766544K  95860K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  486   869  3   1% S 756856K  46212K  fg system   gps thread      system_server
+  172   284  2   0% S 107996K   9432K  fg system   EventThread     /system/bin/surfaceflinger
+  486   630  1   0% R 756856K  46212K  fg system   system_server   system_server
+  818   818  1   0% S 891392K 126632K  fg system   peng.montecarlo com.xiaopeng.montecarlo
+  847  1275  3   0% S 786656K  81664K  fg system   local_recorder  com.xiaopeng.carspeechservice
+  172   876  6   0% S 107996K   9432K  fg system   Binder_5        /system/bin/surfaceflinger
+
+
+
+User 13%, System 13%, IOW 0%, IRQ 0%
+User 16 + Nice 0 + Sys 17 + Idle 88 + IOW 0 + IRQ 0 + SIRQ 1 = 122
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  15% R   1684K    752K     root     top             top
+ 1907  1907  4   5% R 771912K  99520K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+ 1907  1944  6   1% R 771912K  99520K  bg system   FrameSequence d com.xiaopeng.aiassistant
+   63    63  2   1% S      0K      0K     root     ksmd            
+  818  1527  0   0% S 891392K 126632K  fg system   GPosService     com.xiaopeng.montecarlo
+  847  1275  2   0% S 786656K  81664K  fg system   local_recorder  com.xiaopeng.carspeechservice
+  172   172  6   0% S 107996K   9432K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  847  1322  3   0% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+
+
+
+User 13%, System 15%, IOW 0%, IRQ 0%
+User 14 + Nice 3 + Sys 19 + Idle 87 + IOW 0 + IRQ 0 + SIRQ 0 = 123
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  15% R   1684K    752K     root     top             top
+ 1907  1944  7   5% R 772940K 100076K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  4   3% R 772940K 100076K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  179   973  0   0% S  93908K  33712K  fg root     756             /system/bin/carservice
+  172   172  6   0% S 107996K   9432K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  172   189  6   0% S 107996K   9432K  fg system   Binder_2        /system/bin/surfaceflinger
+  847  1405  1   0% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  818  1529  3   0% S 891392K 126632K  fg system   UDP             com.xiaopeng.montecarlo
+
+
+
+User 15%, System 16%, IOW 0%, IRQ 0%
+User 17 + Nice 8 + Sys 27 + Idle 106 + IOW 0 + IRQ 0 + SIRQ 1 = 159
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  11% R   1684K    752K     root     top             top
+ 1907  1944  4   5% S 772104K 100076K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  7   2% S 772104K 100076K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  6   1% S 107996K   9432K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  174   241  0   1% S  44916K   8264K  fg media    AudioOut_2      /system/bin/mediaserver
+  174  1909  0   1% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  166   166  0   0% S   1428K      4K  fg root     healthd         /sbin/healthd
+ 2932  2932  0   0% S      0K      0K     root     kworker/u:0     
+
+
+
+User 11%, System 16%, IOW 1%, IRQ 0%
+User 12 + Nice 5 + Sys 25 + Idle 109 + IOW 2 + IRQ 0 + SIRQ 0 = 153
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  12% R   1684K    752K     root     top             top
+ 1907  1944  7   3% S 772104K 100076K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  4   2% S 772104K 100076K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+   63    63  3   1% S      0K      0K     root     ksmd            
+  847  1405  0   0% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  172   172  4   0% S 107996K   9432K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  172   867  7   0% S 107996K   9432K  fg system   Binder_4        /system/bin/surfaceflinger
+  106   106  1   0% S      0K      0K     root     mmcqd/0         
+
+
+
+User 8%, System 15%, IOW 0%, IRQ 0%
+User 7 + Nice 6 + Sys 22 + Idle 109 + IOW 0 + IRQ 0 + SIRQ 1 = 145
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  12% R   1684K    752K     root     top             top
+ 1907  1944  6   4% R 772104K 100076K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  4   2% S 772104K 100076K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  847  1405  0   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  582   582  1   0% S 731700K  50952K  fg u0_a6    ndroid.systemui com.android.systemui
+ 2932  2932  0   0% S      0K      0K     root     kworker/u:0     
+19557 19557  1   0% S      0K      0K     root     kworker/u:4     
+ 3712  3712  5   0% S      0K      0K     root     ksoftirqd/5     
+
+
+
+User 9%, System 14%, IOW 0%, IRQ 1%
+User 10 + Nice 4 + Sys 22 + Idle 110 + IOW 0 + IRQ 0 + SIRQ 2 = 148
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  12% R   1684K    752K     root     top             top
+ 1907  1944  4   6% S 772104K 100076K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  7   3% S 772104K 100076K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+   63    63  0   2% S      0K      0K     root     ksmd            
+  172   172  4   1% S 107996K   9432K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  818  1529  3   0% S 891392K 126632K  fg system   UDP             com.xiaopeng.montecarlo
+  847  1322  2   0% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  711   743  0   0% S 688180K  31452K  fg system   Binder_1        com.xiaopeng.data.uploader
+
+
+
+User 12%, System 14%, IOW 0%, IRQ 0%
+User 10 + Nice 8 + Sys 21 + Idle 111 + IOW 0 + IRQ 0 + SIRQ 0 = 150
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  12% R   1684K    752K     root     top             top
+ 1907  1944  1   4% R 772104K 100076K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  3   2% S 772940K 100600K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  179  1610  3   0% R  93908K  33712K  fg root     683             /system/bin/carservice
+  818  1528  1   0% S 891392K 126632K  fg system   CarInfoSender   com.xiaopeng.montecarlo
+  172   188  0   0% S 107996K   9432K  fg system   DispSync        /system/bin/surfaceflinger
+ 1556  5290  0   0% S 708156K  35320K  fg system   Binder_5        com.xiaopeng.ota
+ 3712  3712  5   0% S      0K      0K     root     ksoftirqd/5     
+
+
+
+User 16%, System 22%, IOW 0%, IRQ 0%
+User 21 + Nice 6 + Sys 36 + Idle 95 + IOW 0 + IRQ 0 + SIRQ 1 = 159
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  11% R   1684K    752K     root     top             top
+ 1907  1944  0   4% S 772104K 100076K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  7   1% S 772104K 100076K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  174  1909  0   0% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  818  1527  1   0% S 891392K 126632K  fg system   GPosService     com.xiaopeng.montecarlo
+  847  1322  7   0% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  179  1466  6   0% S  93908K  33712K  fg root     955             /system/bin/carservice
+  847  1039  4   0% S 786656K  81664K  fg system   arspeechservice com.xiaopeng.carspeechservice
+
+
+
+User 10%, System 13%, IOW 0%, IRQ 0%
+User 11 + Nice 4 + Sys 19 + Idle 105 + IOW 0 + IRQ 0 + SIRQ 1 = 140
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  12% R   1684K    752K     root     top             top
+ 1907  1944  3   4% R 772940K 100600K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  2   2% S 772940K 100600K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+   63    63  1   1% S      0K      0K     root     ksmd            
+  172   172  7   0% S 107996K   9432K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  847  1322  6   0% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  172   284  6   0% S 107996K   9432K  fg system   EventThread     /system/bin/surfaceflinger
+  172   562  7   0% S 107996K   9432K  fg system   Binder_3        /system/bin/surfaceflinger
+
+
+
+User 6%, System 16%, IOW 0%, IRQ 0%
+User 4 + Nice 5 + Sys 21 + Idle 100 + IOW 0 + IRQ 0 + SIRQ 0 = 130
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  13% R   1684K    752K     root     top             top
+ 1907  1944  1   3% R 772940K 100336K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  0   2% R 772940K 100076K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  174  1909  0   0% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  818   835  0   0% S 891392K 126632K  fg system   Binder_2        com.xiaopeng.montecarlo
+19557 19557  3   0% S      0K      0K     root     kworker/u:4     
+  847  1322  4   0% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  172   172  6   0% S 107996K   9432K  fg system   surfaceflinger  /system/bin/surfaceflinger
+
+
+
+User 16%, System 23%, IOW 0%, IRQ 2%
+User 12 + Nice 3 + Sys 21 + Idle 52 + IOW 0 + IRQ 0 + SIRQ 2 = 90
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  18% R   1684K    752K     root     top             top
+ 1907  1944  3   7% R 772104K 100076K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  0   3% R 772104K 100076K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  486   545  3   2% S 756856K  46212K  fg system   ActivityManager system_server
+  172   172  1   2% S 107996K   9432K  fg system   surfaceflinger  /system/bin/surfaceflinger
+ 3712  3712  5   1% S      0K      0K     root     ksoftirqd/5     
+  847  1407  2   1% S 786656K  81664K  fg system   105-local_vad-n com.xiaopeng.carspeechservice
+  818  1529  3   1% S 891392K 126632K  fg system   UDP             com.xiaopeng.montecarlo
+
+
+
+User 18%, System 29%, IOW 0%, IRQ 2%
+User 10 + Nice 6 + Sys 25 + Idle 43 + IOW 0 + IRQ 0 + SIRQ 2 = 86
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  17% R   1684K    752K     root     top             top
+ 1907  1944  1   8% S 772104K 100076K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  3   4% S 772104K 100076K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+   63    63  2   3% S      0K      0K     root     ksmd            
+ 2932  2932  1   1% S      0K      0K     root     kworker/u:0     
+  847  1405  1   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  818  1527  3   1% S 891392K 126632K  fg system   GPosService     com.xiaopeng.montecarlo
+  486   817  0   1% S 756856K  46212K  fg system   Binder_10       system_server
+
+
+
+User 24%, System 18%, IOW 0%, IRQ 0%
+User 20 + Nice 4 + Sys 18 + Idle 56 + IOW 0 + IRQ 0 + SIRQ 0 = 98
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  19% R   1684K    752K     root     top             top
+ 1907  1907  4   5% S 778832K  99864K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  486   813  1   5% S 756856K  46212K  fg system   Binder_E        system_server
+ 1907  1944  4   4% S 778832K  99864K  bg system   FrameSequence d com.xiaopeng.aiassistant
+  510   510  0   1% S   6788K    264K     root     adbd            /sbin/adbd
+  486   783  0   1% S 756856K  46212K  fg system   Binder_D        system_server
+  510   517  3   1% S   6788K    264K     root     adbd            /sbin/adbd
+  658  1058  1   1% S 684016K  24852K  fg system   Car             com.xiaopeng.chargecontrol
+
+
+
+User 23%, System 24%, IOW 0%, IRQ 0%
+User 22 + Nice 5 + Sys 28 + Idle 61 + IOW 0 + IRQ 0 + SIRQ 0 = 116
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  17% R   1684K    752K     root     top             top
+ 1907  1944  4   7% S 778832K 100188K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  3   3% S 778832K 100188K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  2   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  486   544  3   1% S 756856K  46220K  fg system   WindowManager   system_server
+  174  1909  0   1% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  486   499  2   0% S 756856K  46220K  fg system   Compiler        system_server
+  172   187  0   0% S 114616K   9436K  fg system   Binder_1        /system/bin/surfaceflinger
+
+
+
+User 14%, System 18%, IOW 0%, IRQ 0%
+User 16 + Nice 4 + Sys 25 + Idle 91 + IOW 0 + IRQ 0 + SIRQ 0 = 136
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  13% R   1684K    752K     root     top             top
+ 1907  1944  2   5% S 778832K 100188K  bg system   FrameSequence d com.xiaopeng.aiassistant
+  172   172  4   2% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+ 1907  1907  0   2% S 778832K 100188K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+19557 19557  3   0% S      0K      0K     root     kworker/u:4     
+  106   106  1   0% S      0K      0K     root     mmcqd/0         
+   97    97  2   0% S      0K      0K     root     kworker/u:2     
+ 3714  3714  5   0% S      0K      0K     root     kworker/5:1     
+
+
+
+User 15%, System 18%, IOW 0%, IRQ 0%
+User 13 + Nice 6 + Sys 23 + Idle 81 + IOW 0 + IRQ 0 + SIRQ 0 = 123
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  14% R   1684K    752K     root     top             top
+ 1907  1944  3   4% S 781380K 102100K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  1   4% R 781912K 102296K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  486   869  2   1% S 756856K  46220K  fg system   gps thread      system_server
+  847  1322  4   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  172   172  0   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  847  1405  6   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  818   822  4   0% S 891392K 126640K  fg system   GC              com.xiaopeng.montecarlo
+
+
+
+User 14%, System 21%, IOW 0%, IRQ 0%
+User 15 + Nice 4 + Sys 29 + Idle 83 + IOW 0 + IRQ 0 + SIRQ 1 = 132
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  15% R   1684K    752K     root     top             top
+ 1907  1944  0   7% R 783968K 103852K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  2   5% S 783968K 103852K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  1   2% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  741   741  1   0% S 702632K  35640K  fg system   e.communication com.xiaopeng.device.communication
+  174  1909  0   0% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  741 15528  0   0% S 702632K  35640K  fg system   OkHttp Dispatch com.xiaopeng.device.communication
+ 1907  1934  6   0% S 783968K 103852K  fg system   StackTraceColle com.xiaopeng.aiassistant
+
+
+
+User 22%, System 20%, IOW 0%, IRQ 0%
+User 28 + Nice 6 + Sys 32 + Idle 86 + IOW 0 + IRQ 0 + SIRQ 1 = 153
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  14% R   1684K    752K     root     top             top
+ 1907  1944  1   6% S 783132K 103592K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  2   3% S 783132K 103592K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  1   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+   63    63  2   1% S      0K      0K     root     ksmd            
+  172   876  2   0% S 114616K   9436K  fg system   Binder_5        /system/bin/surfaceflinger
+  174  1909  0   0% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  785  1597  0   0% S 682252K  26116K  fg system   Binder_3        com.xiaopeng.carcontrol
+
+
+
+User 15%, System 15%, IOW 0%, IRQ 0%
+User 16 + Nice 8 + Sys 25 + Idle 110 + IOW 0 + IRQ 0 + SIRQ 1 = 160
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  11% R   1684K    752K     root     top             top
+ 1907  1944  0   5% R 783968K 103852K  bg system   FrameSequence d com.xiaopeng.aiassistant
+  172   172  4   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+ 1907  1907  6   1% S 783968K 103852K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  847  1405  6   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  486   543  6   0% S 756856K  46220K  fg system   SensorService   system_server
+  847  1407  7   0% S 786656K  81664K  fg system   105-local_vad-n com.xiaopeng.carspeechservice
+19557 19557  0   0% S      0K      0K     root     kworker/u:4     
+
+
+
+User 10%, System 19%, IOW 0%, IRQ 0%
+User 12 + Nice 5 + Sys 30 + Idle 108 + IOW 1 + IRQ 0 + SIRQ 0 = 156
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  14% R   1684K    752K     root     top             top
+ 1907  1944  0   7% R 783968K 103852K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  6   3% S 783968K 103852K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  847  1275  3   2% S 786656K  81664K  fg system   local_recorder  com.xiaopeng.carspeechservice
+  172   172  4   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+   63    63  2   1% S      0K      0K     root     ksmd            
+  847  1322  7   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  847  1405  6   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+
+
+
+User 17%, System 16%, IOW 0%, IRQ 0%
+User 25 + Nice 6 + Sys 29 + Idle 121 + IOW 0 + IRQ 0 + SIRQ 0 = 181
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  11% R   1684K    752K     root     top             top
+ 1907  1944  6   4% R 783968K 103852K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  4   2% S 783968K 103852K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  4   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  847  1322  0   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  486   869  3   0% S 756856K  46220K  fg system   gps thread      system_server
+  582   582  1   0% S 731700K  50952K  fg u0_a6    ndroid.systemui com.android.systemui
+  174  1909  1   0% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+
+
+
+User 11%, System 18%, IOW 0%, IRQ 0%
+User 11 + Nice 9 + Sys 33 + Idle 122 + IOW 0 + IRQ 0 + SIRQ 1 = 176
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  13% R   1684K    752K     root     top             top
+ 1907  1944  7   6% R 783132K 103592K  bg system   FrameSequence d com.xiaopeng.aiassistant
+  818  1529  2   3% S 891392K 126640K  fg system   UDP             com.xiaopeng.montecarlo
+ 1907  1907  4   2% S 783968K 104116K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  6   2% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  698   698  2   2% S 676532K  24976K  fg system   openg.diagnosis com.xiaopeng.diagnosis
+  847  1322  2   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  847  1405  2   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+
+
+
+User 22%, System 22%, IOW 0%, IRQ 0%
+User 31 + Nice 7 + Sys 38 + Idle 95 + IOW 0 + IRQ 0 + SIRQ 1 = 172
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  10% R   1684K    752K     root     top             top
+ 1907  1944  0   5% S 783132K 103592K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  2   2% S 783132K 103592K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  1   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+    6     6  0   0% S      0K      0K     root     migration/0     
+  683   710  3   0% S 703604K  32376K  fg system   Binder_1        com.xiaopeng.data.collector
+  172   283  7   0% S 114616K   9436K  fg system   EventThread     /system/bin/surfaceflinger
+ 2932  2932  1   0% S      0K      0K     root     kworker/u:0     
+
+
+
+User 15%, System 22%, IOW 0%, IRQ 0%
+User 11 + Nice 5 + Sys 23 + Idle 64 + IOW 0 + IRQ 0 + SIRQ 0 = 103
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  19% R   1684K    752K     root     top             top
+ 1907  1944  3   6% R 783640K 103592K  bg system   FrameSequence d com.xiaopeng.aiassistant
+  172   172  1   2% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+ 1907  1907  7   2% R 783132K 103592K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  847  1322  3   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  847  1407  0   0% S 786656K  81664K  fg system   105-local_vad-n com.xiaopeng.carspeechservice
+ 1735 31428  2   0% S 684268K  26260K  fg system   Binder_B        com.xiaopeng.uploadcarinfo
+  510   517  1   0% S   6788K    264K     root     adbd            /sbin/adbd
+
+
+
+User 22%, System 17%, IOW 0%, IRQ 0%
+User 19 + Nice 7 + Sys 21 + Idle 70 + IOW 0 + IRQ 0 + SIRQ 0 = 117
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  17% R   1684K    752K     root     top             top
+ 1907  1944  2   9% S 783132K 103592K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  1   4% S 783132K 103592K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  3   2% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+   63    63  2   1% S      0K      0K     root     ksmd            
+19557 19557  2   0% S      0K      0K     root     kworker/u:4     
+  847  1405  2   0% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  847  1322  1   0% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+
+
+
+User 15%, System 26%, IOW 0%, IRQ 0%
+User 10 + Nice 7 + Sys 29 + Idle 62 + IOW 0 + IRQ 0 + SIRQ 0 = 108
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  18% R   1684K    752K     root     top             top
+ 1907  1944  1   7% R 783436K 103592K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  1   3% S 783436K 103592K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  3   2% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  847  1405  1   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  847  1407  0   0% S 786656K  81664K  fg system   105-local_vad-n com.xiaopeng.carspeechservice
+  818  1529  1   0% S 891392K 126640K  fg system   UDP             com.xiaopeng.montecarlo
+  847  1322  1   0% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+
+
+
+User 24%, System 29%, IOW 0%, IRQ 0%
+User 17 + Nice 13 + Sys 36 + Idle 56 + IOW 0 + IRQ 0 + SIRQ 1 = 123
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  17% R   1684K    752K     root     top             top
+ 1907  1944  2   8% R 783132K 103592K  bg system   FrameSequence d com.xiaopeng.aiassistant
+   63    63  2   4% S      0K      0K     root     ksmd            
+  172   172  4   3% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+ 1907  1907  6   3% S 783968K 104116K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  711   711  1   2% S 688180K  31452K  fg system   g.data.uploader com.xiaopeng.data.uploader
+  510   510  1   2% R   6788K    264K     root     adbd            /sbin/adbd
+  847  1322  0   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+
+
+
+User 20%, System 28%, IOW 0%, IRQ 0%
+User 24 + Nice 6 + Sys 42 + Idle 75 + IOW 0 + IRQ 0 + SIRQ 1 = 148
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  15% R   1684K    752K     root     top             top
+ 1907  1944  4   6% R 783968K 104116K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  6   3% S 783968K 103852K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  847  1322  0   1% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  172   172  2   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  847  1405  6   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  658  1308  6   0% S 684016K  24852K  fg system   Binder_3        com.xiaopeng.chargecontrol
+  955  1501  0   0% S 701040K  36348K  fg system   RxSchedulerPurg com.xiaopeng.caraccount
+
+
+
+User 17%, System 16%, IOW 0%, IRQ 0%
+User 18 + Nice 9 + Sys 25 + Idle 100 + IOW 0 + IRQ 0 + SIRQ 1 = 153
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  13% R   1684K    752K     root     top             top
+ 1907  1944  6   5% R 787424K 106632K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  4   3% S 787424K 106368K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  0   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  818  1528  3   1% S 892416K 126640K  fg system   CarInfoSender   com.xiaopeng.montecarlo
+ 3712  3712  5   0% S      0K      0K     root     ksoftirqd/5     
+  847  1322  4   0% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+   97    97  3   0% S      0K      0K     root     kworker/u:2     
+
+
+
+User 14%, System 23%, IOW 0%, IRQ 0%
+User 17 + Nice 5 + Sys 37 + Idle 98 + IOW 0 + IRQ 0 + SIRQ 0 = 157
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  14% R   1684K    752K     root     top             top
+ 1907  1944  4   6% S 787616K 107188K  bg system   FrameSequence d com.xiaopeng.aiassistant
+ 1907  1907  6   3% S 787616K 107188K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  172   172  0   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  847  1405  3   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+   63    63  2   1% S      0K      0K     root     ksmd            
+  174  1909  0   0% S  44916K   8264K  fg media    AudioIn_B       /system/bin/mediaserver
+  510   510  2   0% S   6788K    264K     root     adbd            /sbin/adbd
+
+
+
+User 10%, System 20%, IOW 0%, IRQ 0%
+User 11 + Nice 5 + Sys 30 + Idle 100 + IOW 0 + IRQ 0 + SIRQ 0 = 146
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  19% R   1684K    752K     root     top             top
+ 1907  1907  7   7% S 787724K 107188K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+ 1907  1944  4   5% S 787724K 107188K  bg system   FrameSequence d com.xiaopeng.aiassistant
+23201 23201  6   3% S   1716K    952K     root     logcat          logcat
+  172   172  1   2% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  847  1405  3   0% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+  847  1322  6   0% S 786688K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+  847  1275  1   0% S 786656K  81664K  fg system   local_recorder  com.xiaopeng.carspeechservice
+
+
+
+User 25%, System 32%, IOW 0%, IRQ 0%
+User 51 + Nice 5 + Sys 70 + Idle 90 + IOW 0 + IRQ 0 + SIRQ 2 = 218
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5   9% R   1684K    752K     root     top             top
+  510   510  1   3% S   6788K    264K     root     adbd            /sbin/adbd
+   63    63  1   3% S      0K      0K     root     ksmd            
+  847  1322  2   2% S 786656K  81664K  fg system   bus-server.lua  com.xiaopeng.carspeechservice
+ 1907  1907  7   2% S 787724K 107188K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  538   538  1   1% S    896K    428K     root     logcat          /system/bin/logcat
+  172   172  2   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  847  1405  4   1% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
+
+
+
+User 9%, System 16%, IOW 0%, IRQ 0%
+User 16 + Nice 0 + Sys 27 + Idle 122 + IOW 0 + IRQ 0 + SIRQ 0 = 165
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  10% R   1684K    752K     root     top             top
+  172   172  0   1% S 114616K   9436K  fg system   surfaceflinger  /system/bin/surfaceflinger
+ 1907  1907  7   1% S 787724K 107188K  fg system   eng.aiassistant com.xiaopeng.aiassistant
+  847  1275  6   0% S 786656K  81664K  fg system   local_recorder  com.xiaopeng.carspeechservice
+  510   510  0   0% S   6788K    264K     root     adbd            /sbin/adbd
+  172   562  6   0% S 114616K   9436K  fg system   Binder_3        /system/bin/surfaceflinger
+ 3714  3714  5   0% S      0K      0K     root     kworker/5:1     
+  818  1529  3   0% S 892416K 126640K  fg system   UDP             com.xiaopeng.montecarlo
+
+
+
+User 14%, System 12%, IOW 0%, IRQ 0%
+User 21 + Nice 0 + Sys 19 + Idle 107 + IOW 1 + IRQ 0 + SIRQ 0 = 148
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  13% R   1684K    752K     root     top             top
+ 1907  1907  2   2% D 793352K 106144K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+  818   818  4   2% S 892416K 126640K  fg system   peng.montecarlo com.xiaopeng.montecarlo
+  539   539  1   2% S   2056K   1180K     root     logcat          /system/bin/logcat
+  486   782  2   2% S 756856K  46216K  fg system   Binder_C        system_server
+  510   510  3   2% S   6788K    264K     root     adbd            /sbin/adbd
+  486   544  0   1% R 756856K  46216K  fg system   WindowManager   system_server
+  172   172  1   1% S 114684K   9440K  fg system   surfaceflinger  /system/bin/surfaceflinger
+
+
+
+User 16%, System 21%, IOW 0%, IRQ 0%
+User 23 + Nice 1 + Sys 32 + Idle 91 + IOW 0 + IRQ 0 + SIRQ 0 = 147
+
+  PID   TID PR CPU% S     VSS     RSS PCY UID      Thread          Proc
+ 3707  3707  5  10% R   1684K    752K     root     top             top
+ 1907  1907  1   3% R 716128K  78988K  bg system   eng.aiassistant com.xiaopeng.aiassistant
+   63    63  4   2% S      0K      0K     root     ksmd            
+  172   876  1   1% S 114752K   9440K  fg system   Binder_5        /system/bin/surfaceflinger
+  172   172  7   1% S 114752K   9440K  fg system   surfaceflinger  /system/bin/surfaceflinger
+  486   548  3   0% S 756856K  46216K  fg system   android.fg      system_server
+  486   566  3   0% S 756856K  46216K  fg system   NetdConnector   system_server
+  847  1405  0   0% S 786656K  81664K  fg system   100-local_wakeu com.xiaopeng.carspeechservice
