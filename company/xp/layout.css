@@ -43,8 +43,8 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 header {
-  height: 230px;
-  padding-top: 50px;
+  height: 225px;
+  padding-top: 20px;
   text-align: center;
   background: #2f6994;
   overflow: hidden;
@@ -59,8 +59,8 @@ header {
 }
 
 nav {
-  height: 40px;
-  line-height: 40px;
+  height: 20px;
+  line-height: 20px;
   background: #222222;
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
