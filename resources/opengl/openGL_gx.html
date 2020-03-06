@@ -1,0 +1,128 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="YXBJ Windows/601535 (zh-CN, DDL); Windows/10.0.0 (Win64); EDAMVersion=V2;"/>
+  <meta name="content-class" content="yinxiang.markdown"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="10900"/>
+
+<div><span><div style="font-size: 14px; margin: 0; padding: 0; width: 100%;"><h1 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 41px; border-bottom: 3px double #999; color: #000; margin-top: 14px;">管线</h1>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h3 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 27px; color: #333;">固定管线</h3>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">概念</h4>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin-top: 0; margin-bottom: 0; margin: 0;">渲染管线又称渲染流水线,它是图形图像从数据一步一步形成最终输出的画面所要经历的各种操作的过程.通常来说,以下两大步骤.</p>
+</blockquote>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">顶点渲染:  用于渲染出形状.</h6>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">像素渲染:  在形状中填充颜色.</h6>
+</li>
+</ul>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">简化流程</h5>
+</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="openGL_gx_files/simple.png" type="image/png" data-filename="simple.png"/></p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">顶点渲染</h5>
+</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="openGL_gx_files/vex.png" type="image/png" data-filename="vex.png"/></p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">顶点变化</h6>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">顶点位置从对象空间变换到裁剪空间,对象空间与模型矩阵相乘,是这么坐标进去视觉空间.再与投影矩阵相乘进入裁剪空间.</p>
+</blockquote>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">光照计算</h6>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">光照阶段接受顶点颜色,法线和位置作为数据输入,输出颜色</p>
+</blockquote>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">纹理坐标生成</h6>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">在固定管线中纹理坐标均可以自动生成,可以选择不同的生成方式</p>
+</blockquote>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">裁剪</h6>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">前面几个阶段所进行的任何顶点变换结果在可视区外就会发生裁剪操作.被裁减的顶点被丢弃,并且根据绘制图形的类型,新的顶点会在可视区域相交除形成.颜色顶点坐标和其他的顶点属性沿着裁剪边缘进行插值.</p>
+</blockquote>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="openGL_gx_files/cull.png" type="image/png" data-filename="cull.png"/></p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">像素渲染</h5>
+</li>
+</ul>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="openGL_gx_files/frg.png" type="image/png" data-filename="frg.png"/></p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">固定的片段处理</h5>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">基于片段处理的结果是一个颜色值</p>
+</blockquote>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">纹理应用和环境</h6>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">在这个阶段,我们接受这个片段的所有纹理坐标以及他的主颜色作为输入.这个阶段的输出将是一种新的颜色.</p>
+</blockquote>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">颜色求和</h6>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">这个阶段接收两个输入: 一个主颜色和一个辅助颜色,输出为单一的颜色.这个阶段,主颜色和辅助颜色红,绿,蓝通道就添加在一起,然后截取[0.1]. 固定管线不会使用辅助颜色的alp通道.</p>
+</blockquote>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">雾应用</h6>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">如果雾被启用,这个片段的颜色就与一个常量雾颜色进行混合.</p>
+</blockquote>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">抗锯齿</h6>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">如果像素属于一个启用了平滑特性的图元,一片相关数据就是一个覆盖值,在都是情况下这个值是1.0 ,但是在多边形,边缘片段 这个值就是0.0 -1.0之间.用来和alp相乘,形成线性的渐变.</p>
+</blockquote>
+</div><center style="display:none !important;visibility:collapse !important;height:0 !important;white-space:nowrap;width:100%;overflow:hidden">%23%20%E7%AE%A1%E7%BA%BF%20%0A%0A-%20%23%23%23%20%E5%9B%BA%E5%AE%9A%E7%AE%A1%E7%BA%BF%0A%20%20%20%20-%20%23%23%23%23%20%20%E6%A6%82%E5%BF%B5%0A%20%20%20%20%20%20%20%20%3E%20%20%20%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%BA%BF%E5%8F%88%E7%A7%B0%E6%B8%B2%E6%9F%93%E6%B5%81%E6%B0%B4%E7%BA%BF%2C%E5%AE%83%E6%98%AF%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%E4%BB%8E%E6%95%B0%E6%8D%AE%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%BD%A2%E6%88%90%E6%9C%80%E7%BB%88%E8%BE%93%E5%87%BA%E7%9A%84%E7%94%BB%E9%9D%A2%E6%89%80%E8%A6%81%E7%BB%8F%E5%8E%86%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E7%9A%84%E8%BF%87%E7%A8%8B.%E9%80%9A%E5%B8%B8%E6%9D%A5%E8%AF%B4%2C%E4%BB%A5%E4%B8%8B%E4%B8%A4%E5%A4%A7%E6%AD%A5%E9%AA%A4.%0A%20%20%20-%20%23%23%23%23%23%23%20%20%E9%A1%B6%E7%82%B9%E6%B8%B2%E6%9F%93%3A%20%20%E7%94%A8%E4%BA%8E%E6%B8%B2%E6%9F%93%E5%87%BA%E5%BD%A2%E7%8A%B6.%0A%20%20%20-%20%23%23%23%23%23%23%20%20%E5%83%8F%E7%B4%A0%E6%B8%B2%E6%9F%93%3A%20%20%E5%9C%A8%E5%BD%A2%E7%8A%B6%E4%B8%AD%E5%A1%AB%E5%85%85%E9%A2%9C%E8%89%B2.%0A%0A-%20%23%23%23%23%23%20%E7%AE%80%E5%8C%96%E6%B5%81%E7%A8%8B%0A%0A!%5B5c774dafca4487e8c5e1d1a368618025.png%5D(en-resource%3A%2F%2Fdatabase%2F6361%3A1)%0A%0A%0A%0A%0A-%20%23%23%23%23%23%20%E9%A1%B6%E7%82%B9%E6%B8%B2%E6%9F%93%0A%0A!%5B92e3c0d091650c40b48c1749019e1a58.png%5D(en-resource%3A%2F%2Fdatabase%2F6362%3A1)%0A%0A%0A%0A%0A-%20%20%23%23%23%23%23%23%20%20%E9%A1%B6%E7%82%B9%E5%8F%98%E5%8C%96%0A%20%3E%20%20%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE%E4%BB%8E%E5%AF%B9%E8%B1%A1%E7%A9%BA%E9%97%B4%E5%8F%98%E6%8D%A2%E5%88%B0%E8%A3%81%E5%89%AA%E7%A9%BA%E9%97%B4%2C%E5%AF%B9%E8%B1%A1%E7%A9%BA%E9%97%B4%E4%B8%8E%E6%A8%A1%E5%9E%8B%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98%2C%E6%98%AF%E8%BF%99%E4%B9%88%E5%9D%90%E6%A0%87%E8%BF%9B%E5%8E%BB%E8%A7%86%E8%A7%89%E7%A9%BA%E9%97%B4.%E5%86%8D%E4%B8%8E%E6%8A%95%E5%BD%B1%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98%E8%BF%9B%E5%85%A5%E8%A3%81%E5%89%AA%E7%A9%BA%E9%97%B4.%0A%0A%0A-%20%20%23%23%23%23%23%23%20%20%E5%85%89%E7%85%A7%E8%AE%A1%E7%AE%97%0A%20%3E%20%20%E5%85%89%E7%85%A7%E9%98%B6%E6%AE%B5%E6%8E%A5%E5%8F%97%E9%A1%B6%E7%82%B9%E9%A2%9C%E8%89%B2%2C%E6%B3%95%E7%BA%BF%E5%92%8C%E4%BD%8D%E7%BD%AE%E4%BD%9C%E4%B8%BA%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5%2C%E8%BE%93%E5%87%BA%E9%A2%9C%E8%89%B2%0A%0A-%20%20%23%23%23%23%23%23%20%20%E7%BA%B9%E7%90%86%E5%9D%90%E6%A0%87%E7%94%9F%E6%88%90%0A%3E%20%E5%9C%A8%E5%9B%BA%E5%AE%9A%E7%AE%A1%E7%BA%BF%E4%B8%AD%E7%BA%B9%E7%90%86%E5%9D%90%E6%A0%87%E5%9D%87%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%2C%E5%8F%AF%E4%BB%A5%E9%80%89%E6%8B%A9%E4%B8%8D%E5%90%8C%E7%9A%84%E7%94%9F%E6%88%90%E6%96%B9%E5%BC%8F%0A%0A-%20%20%23%23%23%23%23%23%20%E8%A3%81%E5%89%AA%0A%3E%20%E5%89%8D%E9%9D%A2%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5%E6%89%80%E8%BF%9B%E8%A1%8C%E7%9A%84%E4%BB%BB%E4%BD%95%E9%A1%B6%E7%82%B9%E5%8F%98%E6%8D%A2%E7%BB%93%E6%9E%9C%E5%9C%A8%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%A4%96%E5%B0%B1%E4%BC%9A%E5%8F%91%E7%94%9F%E8%A3%81%E5%89%AA%E6%93%8D%E4%BD%9C.%E8%A2%AB%E8%A3%81%E5%87%8F%E7%9A%84%E9%A1%B6%E7%82%B9%E8%A2%AB%E4%B8%A2%E5%BC%83%2C%E5%B9%B6%E4%B8%94%E6%A0%B9%E6%8D%AE%E7%BB%98%E5%88%B6%E5%9B%BE%E5%BD%A2%E7%9A%84%E7%B1%BB%E5%9E%8B%2C%E6%96%B0%E7%9A%84%E9%A1%B6%E7%82%B9%E4%BC%9A%E5%9C%A8%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9F%9F%E7%9B%B8%E4%BA%A4%E9%99%A4%E5%BD%A2%E6%88%90.%E9%A2%9C%E8%89%B2%E9%A1%B6%E7%82%B9%E5%9D%90%E6%A0%87%E5%92%8C%E5%85%B6%E4%BB%96%E7%9A%84%E9%A1%B6%E7%82%B9%E5%B1%9E%E6%80%A7%E6%B2%BF%E7%9D%80%E8%A3%81%E5%89%AA%E8%BE%B9%E7%BC%98%E8%BF%9B%E8%A1%8C%E6%8F%92%E5%80%BC.%0A%0A%0A!%5B8ee2750eea29c9348c36b45a81d3958d.png%5D(en-resource%3A%2F%2Fdatabase%2F6352%3A1)%0A%0A%0A%0A-%20%23%23%23%23%23%20%E5%83%8F%E7%B4%A0%E6%B8%B2%E6%9F%93%0A%0A%0A!%5B62b633f17371f3123a73cd94e728dd9a.png%5D(en-resource%3A%2F%2Fdatabase%2F6363%3A1)%0A%0A%0A%0A%0A%0A-%20%23%23%23%23%23%20%E5%9B%BA%E5%AE%9A%E7%9A%84%E7%89%87%E6%AE%B5%E5%A4%84%E7%90%86%0A%3E%20%20%E5%9F%BA%E4%BA%8E%E7%89%87%E6%AE%B5%E5%A4%84%E7%90%86%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF%E4%B8%80%E4%B8%AA%E9%A2%9C%E8%89%B2%E5%80%BC%0A%0A-%20%23%23%23%23%23%23%20%E7%BA%B9%E7%90%86%E5%BA%94%E7%94%A8%E5%92%8C%E7%8E%AF%E5%A2%83%0A%3E%20%20%20%E5%9C%A8%E8%BF%99%E4%B8%AA%E9%98%B6%E6%AE%B5%2C%E6%88%91%E4%BB%AC%E6%8E%A5%E5%8F%97%E8%BF%99%E4%B8%AA%E7%89%87%E6%AE%B5%E7%9A%84%E6%89%80%E6%9C%89%E7%BA%B9%E7%90%86%E5%9D%90%E6%A0%87%E4%BB%A5%E5%8F%8A%E4%BB%96%E7%9A%84%E4%B8%BB%E9%A2%9C%E8%89%B2%E4%BD%9C%E4%B8%BA%E8%BE%93%E5%85%A5.%E8%BF%99%E4%B8%AA%E9%98%B6%E6%AE%B5%E7%9A%84%E8%BE%93%E5%87%BA%E5%B0%86%E6%98%AF%E4%B8%80%E7%A7%8D%E6%96%B0%E7%9A%84%E9%A2%9C%E8%89%B2.%0A%0A-%20%23%23%23%23%23%23%20%E9%A2%9C%E8%89%B2%E6%B1%82%E5%92%8C%0A%3E%20%E8%BF%99%E4%B8%AA%E9%98%B6%E6%AE%B5%E6%8E%A5%E6%94%B6%E4%B8%A4%E4%B8%AA%E8%BE%93%E5%85%A5%3A%20%E4%B8%80%E4%B8%AA%E4%B8%BB%E9%A2%9C%E8%89%B2%E5%92%8C%E4%B8%80%E4%B8%AA%E8%BE%85%E5%8A%A9%E9%A2%9C%E8%89%B2%2C%E8%BE%93%E5%87%BA%E4%B8%BA%E5%8D%95%E4%B8%80%E7%9A%84%E9%A2%9C%E8%89%B2.%E8%BF%99%E4%B8%AA%E9%98%B6%E6%AE%B5%2C%E4%B8%BB%E9%A2%9C%E8%89%B2%E5%92%8C%E8%BE%85%E5%8A%A9%E9%A2%9C%E8%89%B2%E7%BA%A2%2C%E7%BB%BF%2C%E8%93%9D%E9%80%9A%E9%81%93%E5%B0%B1%E6%B7%BB%E5%8A%A0%E5%9C%A8%E4%B8%80%E8%B5%B7%2C%E7%84%B6%E5%90%8E%E6%88%AA%E5%8F%96%5B0.1%5D.%20%E5%9B%BA%E5%AE%9A%E7%AE%A1%E7%BA%BF%E4%B8%8D%E4%BC%9A%E4%BD%BF%E7%94%A8%E8%BE%85%E5%8A%A9%E9%A2%9C%E8%89%B2%E7%9A%84alp%E9%80%9A%E9%81%93.%0A%0A%0A-%20%23%23%23%23%23%23%20%E9%9B%BE%E5%BA%94%E7%94%A8%0A%3E%20%E5%A6%82%E6%9E%9C%E9%9B%BE%E8%A2%AB%E5%90%AF%E7%94%A8%2C%E8%BF%99%E4%B8%AA%E7%89%87%E6%AE%B5%E7%9A%84%E9%A2%9C%E8%89%B2%E5%B0%B1%E4%B8%8E%E4%B8%80%E4%B8%AA%E5%B8%B8%E9%87%8F%E9%9B%BE%E9%A2%9C%E8%89%B2%E8%BF%9B%E8%A1%8C%E6%B7%B7%E5%90%88.%0A%0A%0A-%20%23%23%23%23%23%23%20%E6%8A%97%E9%94%AF%E9%BD%BF%20%0A%3E%20%20%E5%A6%82%E6%9E%9C%E5%83%8F%E7%B4%A0%E5%B1%9E%E4%BA%8E%E4%B8%80%E4%B8%AA%E5%90%AF%E7%94%A8%E4%BA%86%E5%B9%B3%E6%BB%91%E7%89%B9%E6%80%A7%E7%9A%84%E5%9B%BE%E5%85%83%2C%E4%B8%80%E7%89%87%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E5%B0%B1%E6%98%AF%E4%B8%80%E4%B8%AA%E8%A6%86%E7%9B%96%E5%80%BC%2C%E5%9C%A8%E9%83%BD%E6%98%AF%E6%83%85%E5%86%B5%E4%B8%8B%E8%BF%99%E4%B8%AA%E5%80%BC%E6%98%AF1.0%20%2C%E4%BD%86%E6%98%AF%E5%9C%A8%E5%A4%9A%E8%BE%B9%E5%BD%A2%2C%E8%BE%B9%E7%BC%98%E7%89%87%E6%AE%B5%20%E8%BF%99%E4%B8%AA%E5%80%BC%E5%B0%B1%E6%98%AF0.0%20-1.0%E4%B9%8B%E9%97%B4.%E7%94%A8%E6%9D%A5%E5%92%8Calp%E7%9B%B8%E4%B9%98%2C%E5%BD%A2%E6%88%90%E7%BA%BF%E6%80%A7%E7%9A%84%E6%B8%90%E5%8F%98.%0A%0A%0A%0A</center></span>
+</div></body></html> 
