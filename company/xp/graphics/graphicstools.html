@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <header class="clearfix">
+ </header>
+  
+
+
+<section class="clearfix" id="resources"> 
+	<table width="70%" align="center" >
+			<tr>
+				<th colspan="6" align="left">
+					<h2 class="sticky">graphis tools</h2>
+				</th>
+			</tr>
+			<tr>
+				<td>  <li class="link"><a rel="external" href="http://portal.xiaopeng.local/">Android GPU Inspector</a></li></td>
+				<!--
+				<td>  <li class="link"><a rel="external" href="http://zendao.xiaopeng.local/zentao/product-browse-63--byModule-964.html">禅道</a></li></td>
+				<td>  <li class="link"><a rel="external" href="http://doc.xiaopeng.local:18090/pages/#all-updates"> Confluence</a></li></td>
+				<td>  <li class="link"><a rel="external" href="http://ci.xiaopeng.local:1081/#/dashboard/self">Code ReView</a></li></td>
+			-->
+			</tr>
+			
+			<!--
+			<tr>
+				<td>   <li class="link"><a rel="external" href="http://doc.xiaopeng.local:18090/pages/viewpage.action?pageId=17273824">性能周报</a></li></td>
+				<td>  <li class="link"><a rel="external" href="http://jenkins.xiaopeng.local:8080/view/Code_management/">Jenkins</a></li></td>
+				<td>  <li class="link"><a rel="external" href="http://maven.xiaopeng.local:8081/nexus/content/repositories/">Maven</a></li></td>
+				<td>  <li class="link"><a rel="external" href="http://ci.xiaopeng.local:1081/#/dashboard/self">Gerrit</a></li></td>
+			</tr>
+
+			<tr>
+				<td>   <li class="link"><a rel="external" href="\\10.192.39.84\rom">ROM</a></li></td>
+				<td>   <li class="link"><a rel="external" href="https://tangyong3g.github.io/net/resources/opengl/graphics.html">图形目录</a></li></td>
+				<td>   <li class="link"><a rel="external" href="https://tangyong3g.github.io/net/resources/opengl/graphics.html">graphics tools</a></li></td>
+			</tr>
+		-->
+		
+	</table>
+</section>
+  
+
+
+  <script>
+    'use strict';
+    var anchors = document.getElementsByTagName('a');
+    var anchor;
+    for (var i = 0, l = anchors.length; i !== l; ++i) {
+      anchor = anchors[i];
+      if (anchor.getAttribute('rel') === 'external') {
+        anchor.setAttribute('target', '_blank');
+      }
+    }
+
+    var banner = document.getElementById('banner');
+    window.onscroll = function () {
+      if (window.scrollY >= 120) {
+        banner.className = banner.className.replace(/hide/g, ' ');
+      }
+      else {
+        banner.className += ' hide';
+      }
+    };
+  </script>
+</body>
+</html>
