@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="exporter-version" content="Evernote Mac 9.4.6 (461470)"/><meta name="keywords" content="图形学, 学习笔记, openGL, OpenGL讲义, WIKI"/><meta name="author" content="汤勇-师爷"/><meta name="created" content="2019-12-10 03:47:46 +0000"/><meta name="source" content="desktop.win"/><meta name="source-application" content="yinxiang.win32"/><meta name="source-url" content="https://blog.csdn.net/csxiaoshui/article/details/53332647"/><meta name="updated" content="2020-03-14 08:01:11 +0000"/><meta name="content-class" content="yinxiang.markdown"/><title>第三节_光照</title></head><body><div style="font-size: 14px; margin: 0; padding: 0; width: 100%;"><h1 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 41px; border-bottom: 3px double #999; color: #000; margin-top: 14px;">光照</h1>
+<h3 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 27px; color: #333;">简单光照模型</h3>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">环境光(ambient))</h4>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">环境光</strong> ：环境光不来自任何特定的方向，它来自某个光源，但是光线却是在场景中四处反射，没有方向可言。环境光照射的物体表面都是均匀照亮的。</p>
+</blockquote>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">没有特定方向</strong></li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">没有方向可言</strong></li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">表面均匀加亮</strong></li>
+</ol>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">散射光(diffuse)</h4>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">散射光</strong> ：散射光具有方向性，来自于一个特定的方向。它根据入射光线的角度在表面均匀地反射开来。因此，如果光线直接指向物体表面，它看上去更明亮一些。如果光线是从一个较大的角度照射到物体表面，那么它看上去显得暗一些。</p>
+</blockquote>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">具有方向性</strong></li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">均匀反射</strong></li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">和法线光系产生明暗</strong></li>
+</ol>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">镜面光(specular)</h4>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">镜面光</strong> ：和散射光一样，镜面光也具有很强的方向性，但是它的反射角度很锐利，只有沿着一个特定的方向反射。高强度的镜面光倾向于在它照射物体的表面形成一个亮点。由于高度方向性的特点，能否被看到取决于观察者的位置。</p>
+</blockquote>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">有方向性</strong></li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">只沿着一个特定的方向反射</strong></li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">形成一个亮点</strong></li>
+</ol>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="https://img-blog.csdn.net/20161125182546626" style="line-height: 160%; margin: 4px 0 10px; box-sizing: border-box; vertical-align: top; max-width: 100%;"/></p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">物体的材质(Material)</h4>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">我们并不把物体描述为具有一种特定的颜色,而是认为他由一些具有某种反射属性的材料所组成.指定反射属性的时候,同样指定这种材料对于环境光,散射光,以及镜面光的反射属性.</p>
+</blockquote>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">光照计算公式</h4>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">环境光计算公式</h5>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin-top: 0; margin-bottom: 0; margin: 0;">光源的环境光与材质的环境光相乘后计算得到.</p>
+</blockquote>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">光(R,G,B) x 材质(R',G',B') = (RxR', GxG', BxB')
+</code></pre>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">散射光计算</h5>
+</li>
+</ul>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">C = max(N*L , 0)*Cmat * Cli 
+</code></pre>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">镜面光计算公式</h5>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">计算入射光方向</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">计算反射光方向</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">计算顶点到相机的方向</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">计算反射光与顶点-相机方向的夹角</li>
+</ol>
+</li>
+</ul>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;"><span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//计算入射光方向</span>
+<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">vec3</span> incidenceVector = -surfaceToLight; <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//a unit vector</span>
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//计算反射光方向（根据入射光方向和法线方向）</span>
+<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">vec3</span> reflectionVector = <span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">reflect</span>(incidenceVector, normal); <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//also a unit vector</span>
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//计算顶点到相机的方向</span>
+<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">vec3</span> surfaceToCamera = <span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">normalize</span>(cameraPosition - surfacePosition); <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//also a unit vector</span>
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//计算顶点-相机方向与反射光方向夹角的余弦值</span>
+<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">float</span> cosAngle = <span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">max</span>(<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">0.0</span>, <span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">dot</span>(surfaceToCamera, reflectionVector));
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//引用镜面光的指数（shinness）</span>
+<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">float</span> specularCoefficient = <span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">pow</span>(cosAngle, materialShininess);
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//计算镜面光成分</span>
+<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">vec3</span> specularComponent = specularCoefficient * materialSpecularColor * light.intensities;
+</code></pre>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">光的衰减</h4>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin-top: 0; margin-bottom: 0; margin: 0;">光线的衰减和光源到物体便面的距离的二次方成反比</p>
+</blockquote>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">a = <span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">1</span>/<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">1</span>+<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">pow</span>(d,<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">2</span>)   
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//k为衰减系数</span>
+a = <span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">1</span>/(<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">1</span>+k*power(d,<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">2</span>))
+</code></pre>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">平行光</h4>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin-top: 0; margin-bottom: 0; margin: 0;">平行光可理解为光源在无穷远的点光源,在OpenGL中平行光不考虑衰减</p>
+</blockquote>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">聚光灯</h4>
+</li>
+</ul>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">聚光灯和点光源类似,只是聚光灯光照被限制在一个圆锥形状内.相比点光源多出圆锥中线方向,圆锥角度,计算的过程只需要得到聚光灯到顶点与圆锥中线方向的夹角小于ConeAngle，就可以使用点光源的计算方法，否则就让让衰减量最大。</p>
+</blockquote>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;"><span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">// 1. 获取圆锥中心线的方向</span>
+<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">vec3</span> coneDirection = <span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">normalize</span>(light.coneDirection);
+
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">// 2. 获取顶点到聚光灯灯源的方向</span>
+<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">vec3</span> rayDirection = -surfaceToLight;
+
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">// 3.计算二者的角度</span>
+<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">float</span> lightToSurfaceAngle = <span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">degrees</span>(<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">acos</span>(<span style="color: #4ec9b0; line-height: 160%; box-sizing: content-box;">dot</span>(rayDirection, coneDirection)))
+
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">// 4. 判断是否在聚光灯照射下，如果超出，那么衰减最大</span>
+<span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">if</span>(lightToSurfaceAngle &gt; light.coneAngle){
+  attenuation = <span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">0.0</span>;
+}
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><a href="https://blog.csdn.net/wudiliyao/article/details/80750630" style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">聚光灯</a></p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><a href="https://blog.csdn.net/csxiaoshui/article/details/53332647" style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">光照</a></p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">https://www.cnblogs.com/StrayWolf/articles/6849725.html</li>
+</ul>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">ProList</h5>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative; border: 0; list-style: none; padding-left: 22px; margin-left: -22px; background-repeat: no-repeat; background-size: 16px 16px; background-position: 0 2px; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAADdJREFUKBVjvHv37n8GMgALSI+SkhJJWu/du8fARJIOJMWjGpECA505GjjoIYLEB6dVUNojFQAA/1MJUFWet/4AAAAASUVORK5CYII=');"> 如何解释 diffuseColor</li>
+</ul>
+</div><center style="display:none !important;visibility:collapse !important;height:0 !important;white-space:nowrap;width:100%;overflow:hidden">%0A%23%20%E5%85%89%E7%85%A7%0A%0A%23%23%23%20%E7%AE%80%E5%8D%95%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%0A%0A*%20%23%23%23%23%20%20%E7%8E%AF%E5%A2%83%E5%85%89(ambient))%0A%0A%3E%20%20__%E7%8E%AF%E5%A2%83%E5%85%89__%20%EF%BC%9A%E7%8E%AF%E5%A2%83%E5%85%89%E4%B8%8D%E6%9D%A5%E8%87%AA%E4%BB%BB%E4%BD%95%E7%89%B9%E5%AE%9A%E7%9A%84%E6%96%B9%E5%90%91%EF%BC%8C%E5%AE%83%E6%9D%A5%E8%87%AA%E6%9F%90%E4%B8%AA%E5%85%89%E6%BA%90%EF%BC%8C%E4%BD%86%E6%98%AF%E5%85%89%E7%BA%BF%E5%8D%B4%E6%98%AF%E5%9C%A8%E5%9C%BA%E6%99%AF%E4%B8%AD%E5%9B%9B%E5%A4%84%E5%8F%8D%E5%B0%84%EF%BC%8C%E6%B2%A1%E6%9C%89%E6%96%B9%E5%90%91%E5%8F%AF%E8%A8%80%E3%80%82%E7%8E%AF%E5%A2%83%E5%85%89%E7%85%A7%E5%B0%84%E7%9A%84%E7%89%A9%E4%BD%93%E8%A1%A8%E9%9D%A2%E9%83%BD%E6%98%AF%E5%9D%87%E5%8C%80%E7%85%A7%E4%BA%AE%E7%9A%84%E3%80%82%0A%0A1.%20__%E6%B2%A1%E6%9C%89%E7%89%B9%E5%AE%9A%E6%96%B9%E5%90%91__%0A2.%20__%E6%B2%A1%E6%9C%89%E6%96%B9%E5%90%91%E5%8F%AF%E8%A8%80__%0A3.%20__%E8%A1%A8%E9%9D%A2%E5%9D%87%E5%8C%80%E5%8A%A0%E4%BA%AE__%0A%0A%0A*%20%23%23%23%23%20%20%E6%95%A3%E5%B0%84%E5%85%89(diffuse)%0A%0A%3E%20%20__%E6%95%A3%E5%B0%84%E5%85%89__%20%EF%BC%9A%E6%95%A3%E5%B0%84%E5%85%89%E5%85%B7%E6%9C%89%E6%96%B9%E5%90%91%E6%80%A7%EF%BC%8C%E6%9D%A5%E8%87%AA%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%89%B9%E5%AE%9A%E7%9A%84%E6%96%B9%E5%90%91%E3%80%82%E5%AE%83%E6%A0%B9%E6%8D%AE%E5%85%A5%E5%B0%84%E5%85%89%E7%BA%BF%E7%9A%84%E8%A7%92%E5%BA%A6%E5%9C%A8%E8%A1%A8%E9%9D%A2%E5%9D%87%E5%8C%80%E5%9C%B0%E5%8F%8D%E5%B0%84%E5%BC%80%E6%9D%A5%E3%80%82%E5%9B%A0%E6%AD%A4%EF%BC%8C%E5%A6%82%E6%9E%9C%E5%85%89%E7%BA%BF%E7%9B%B4%E6%8E%A5%E6%8C%87%E5%90%91%E7%89%A9%E4%BD%93%E8%A1%A8%E9%9D%A2%EF%BC%8C%E5%AE%83%E7%9C%8B%E4%B8%8A%E5%8E%BB%E6%9B%B4%E6%98%8E%E4%BA%AE%E4%B8%80%E4%BA%9B%E3%80%82%E5%A6%82%E6%9E%9C%E5%85%89%E7%BA%BF%E6%98%AF%E4%BB%8E%E4%B8%80%E4%B8%AA%E8%BE%83%E5%A4%A7%E7%9A%84%E8%A7%92%E5%BA%A6%E7%85%A7%E5%B0%84%E5%88%B0%E7%89%A9%E4%BD%93%E8%A1%A8%E9%9D%A2%EF%BC%8C%E9%82%A3%E4%B9%88%E5%AE%83%E7%9C%8B%E4%B8%8A%E5%8E%BB%E6%98%BE%E5%BE%97%E6%9A%97%E4%B8%80%E4%BA%9B%E3%80%82%0A%0A1.%20%20__%E5%85%B7%E6%9C%89%E6%96%B9%E5%90%91%E6%80%A7__%0A2.%20%20__%E5%9D%87%E5%8C%80%E5%8F%8D%E5%B0%84__%0A3.%20%20__%E5%92%8C%E6%B3%95%E7%BA%BF%E5%85%89%E7%B3%BB%E4%BA%A7%E7%94%9F%E6%98%8E%E6%9A%97__%0A%0A%0A*%20%23%23%23%23%20%20%E9%95%9C%E9%9D%A2%E5%85%89(specular)%0A%0A%3E%20%20__%E9%95%9C%E9%9D%A2%E5%85%89__%20%EF%BC%9A%E5%92%8C%E6%95%A3%E5%B0%84%E5%85%89%E4%B8%80%E6%A0%B7%EF%BC%8C%E9%95%9C%E9%9D%A2%E5%85%89%E4%B9%9F%E5%85%B7%E6%9C%89%E5%BE%88%E5%BC%BA%E7%9A%84%E6%96%B9%E5%90%91%E6%80%A7%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%83%E7%9A%84%E5%8F%8D%E5%B0%84%E8%A7%92%E5%BA%A6%E5%BE%88%E9%94%90%E5%88%A9%EF%BC%8C%E5%8F%AA%E6%9C%89%E6%B2%BF%E7%9D%80%E4%B8%80%E4%B8%AA%E7%89%B9%E5%AE%9A%E7%9A%84%E6%96%B9%E5%90%91%E5%8F%8D%E5%B0%84%E3%80%82%E9%AB%98%E5%BC%BA%E5%BA%A6%E7%9A%84%E9%95%9C%E9%9D%A2%E5%85%89%E5%80%BE%E5%90%91%E4%BA%8E%E5%9C%A8%E5%AE%83%E7%85%A7%E5%B0%84%E7%89%A9%E4%BD%93%E7%9A%84%E8%A1%A8%E9%9D%A2%E5%BD%A2%E6%88%90%E4%B8%80%E4%B8%AA%E4%BA%AE%E7%82%B9%E3%80%82%E7%94%B1%E4%BA%8E%E9%AB%98%E5%BA%A6%E6%96%B9%E5%90%91%E6%80%A7%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%8C%E8%83%BD%E5%90%A6%E8%A2%AB%E7%9C%8B%E5%88%B0%E5%8F%96%E5%86%B3%E4%BA%8E%E8%A7%82%E5%AF%9F%E8%80%85%E7%9A%84%E4%BD%8D%E7%BD%AE%E3%80%82%0A%0A%0A1.%20__%E6%9C%89%E6%96%B9%E5%90%91%E6%80%A7__%0A2.%20__%E5%8F%AA%E6%B2%BF%E7%9D%80%E4%B8%80%E4%B8%AA%E7%89%B9%E5%AE%9A%E7%9A%84%E6%96%B9%E5%90%91%E5%8F%8D%E5%B0%84__%0A3.%20__%E5%BD%A2%E6%88%90%E4%B8%80%E4%B8%AA%E4%BA%AE%E7%82%B9__%0A%0A%0A%0A!%5B%E6%95%88%E6%9E%9C%5D(https%3A%2F%2Fimg-blog.csdn.net%2F20161125182546626)%0A%0A%0A*%20%23%23%23%23%20%E7%89%A9%E4%BD%93%E7%9A%84%E6%9D%90%E8%B4%A8(Material)%0A%0A%3E%20%E6%88%91%E4%BB%AC%E5%B9%B6%E4%B8%8D%E6%8A%8A%E7%89%A9%E4%BD%93%E6%8F%8F%E8%BF%B0%E4%B8%BA%E5%85%B7%E6%9C%89%E4%B8%80%E7%A7%8D%E7%89%B9%E5%AE%9A%E7%9A%84%E9%A2%9C%E8%89%B2%2C%E8%80%8C%E6%98%AF%E8%AE%A4%E4%B8%BA%E4%BB%96%E7%94%B1%E4%B8%80%E4%BA%9B%E5%85%B7%E6%9C%89%E6%9F%90%E7%A7%8D%E5%8F%8D%E5%B0%84%E5%B1%9E%E6%80%A7%E7%9A%84%E6%9D%90%E6%96%99%E6%89%80%E7%BB%84%E6%88%90.%E6%8C%87%E5%AE%9A%E5%8F%8D%E5%B0%84%E5%B1%9E%E6%80%A7%E7%9A%84%E6%97%B6%E5%80%99%2C%E5%90%8C%E6%A0%B7%E6%8C%87%E5%AE%9A%E8%BF%99%E7%A7%8D%E6%9D%90%E6%96%99%E5%AF%B9%E4%BA%8E%E7%8E%AF%E5%A2%83%E5%85%89%2C%E6%95%A3%E5%B0%84%E5%85%89%2C%E4%BB%A5%E5%8F%8A%E9%95%9C%E9%9D%A2%E5%85%89%E7%9A%84%E5%8F%8D%E5%B0%84%E5%B1%9E%E6%80%A7.%0A%0A%0A*%20%23%23%23%23%20%E5%85%89%E7%85%A7%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%0A%20%20%20%20*%20%20%23%23%23%23%23%20%E7%8E%AF%E5%A2%83%E5%85%89%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%0A%20%20%20%20%3E%20%E5%85%89%E6%BA%90%E7%9A%84%E7%8E%AF%E5%A2%83%E5%85%89%E4%B8%8E%E6%9D%90%E8%B4%A8%E7%9A%84%E7%8E%AF%E5%A2%83%E5%85%89%E7%9B%B8%E4%B9%98%E5%90%8E%E8%AE%A1%E7%AE%97%E5%BE%97%E5%88%B0.%0A%20%20%20%20%0A%20%20%20%20%60%60%60%0A%20%20%20%20%E5%85%89(R%2CG%2CB)%20x%20%E6%9D%90%E8%B4%A8(R'%2CG'%2CB')%20%3D%20(RxR'%2C%20GxG'%2C%20BxB')%0A%20%20%20%20%60%60%60%0A%20%20%20%20%0A%20%20%20%20*%20%20%23%23%23%23%23%20%E6%95%A3%E5%B0%84%E5%85%89%E8%AE%A1%E7%AE%97%0A%20%20%20%20%0A%20%20%20%20%60%60%60%0A%20%20%20%20C%20%3D%20max(N*L%20%2C%200)*Cmat%20*%20Cli%20%0A%20%20%20%20%60%60%60%0A%20%20%20%20%0A%20%20%20%20*%20%23%23%23%23%23%20%E9%95%9C%E9%9D%A2%E5%85%89%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F%0A%20%20%20%20%20%20%20%201.%20%E8%AE%A1%E7%AE%97%E5%85%A5%E5%B0%84%E5%85%89%E6%96%B9%E5%90%91%0A%20%20%20%20%20%20%20%202.%20%E8%AE%A1%E7%AE%97%E5%8F%8D%E5%B0%84%E5%85%89%E6%96%B9%E5%90%91%0A%20%20%20%20%20%20%20%203.%20%E8%AE%A1%E7%AE%97%E9%A1%B6%E7%82%B9%E5%88%B0%E7%9B%B8%E6%9C%BA%E7%9A%84%E6%96%B9%E5%90%91%0A%20%20%20%20%20%20%20%204.%20%E8%AE%A1%E7%AE%97%E5%8F%8D%E5%B0%84%E5%85%89%E4%B8%8E%E9%A1%B6%E7%82%B9-%E7%9B%B8%E6%9C%BA%E6%96%B9%E5%90%91%E7%9A%84%E5%A4%B9%E8%A7%92%0A%20%20%20%20%20%20%20%0A%20%20%20%20%60%60%60%20GLSL%0A%20%20%20%20%2F%2F%E8%AE%A1%E7%AE%97%E5%85%A5%E5%B0%84%E5%85%89%E6%96%B9%E5%90%91%0A%20%20%20%20vec3%20incidenceVector%20%3D%20-surfaceToLight%3B%20%2F%2Fa%20unit%20vector%0A%20%20%20%20%2F%2F%E8%AE%A1%E7%AE%97%E5%8F%8D%E5%B0%84%E5%85%89%E6%96%B9%E5%90%91%EF%BC%88%E6%A0%B9%E6%8D%AE%E5%85%A5%E5%B0%84%E5%85%89%E6%96%B9%E5%90%91%E5%92%8C%E6%B3%95%E7%BA%BF%E6%96%B9%E5%90%91%EF%BC%89%0A%20%20%20%20vec3%20reflectionVector%20%3D%20reflect(incidenceVector%2C%20normal)%3B%20%2F%2Falso%20a%20unit%20vector%0A%20%20%20%20%2F%2F%E8%AE%A1%E7%AE%97%E9%A1%B6%E7%82%B9%E5%88%B0%E7%9B%B8%E6%9C%BA%E7%9A%84%E6%96%B9%E5%90%91%0A%20%20%20%20vec3%20surfaceToCamera%20%3D%20normalize(cameraPosition%20-%20surfacePosition)%3B%20%2F%2Falso%20a%20unit%20vector%0A%20%20%20%20%2F%2F%E8%AE%A1%E7%AE%97%E9%A1%B6%E7%82%B9-%E7%9B%B8%E6%9C%BA%E6%96%B9%E5%90%91%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%85%89%E6%96%B9%E5%90%91%E5%A4%B9%E8%A7%92%E7%9A%84%E4%BD%99%E5%BC%A6%E5%80%BC%0A%20%20%20%20float%20cosAngle%20%3D%20max(0.0%2C%20dot(surfaceToCamera%2C%20reflectionVector))%3B%0A%20%20%20%20%2F%2F%E5%BC%95%E7%94%A8%E9%95%9C%E9%9D%A2%E5%85%89%E7%9A%84%E6%8C%87%E6%95%B0%EF%BC%88shinness%EF%BC%89%0A%20%20%20%20float%20specularCoefficient%20%3D%20pow(cosAngle%2C%20materialShininess)%3B%0A%20%20%20%20%2F%2F%E8%AE%A1%E7%AE%97%E9%95%9C%E9%9D%A2%E5%85%89%E6%88%90%E5%88%86%0A%20%20%20%20vec3%20specularComponent%20%3D%20specularCoefficient%20*%20materialSpecularColor%20*%20light.intensities%3B%0A%20%20%20%20%60%60%60%0A%20%20%20%20%0A%20%0A%20*%20%23%23%23%23%20%E5%85%89%E7%9A%84%E8%A1%B0%E5%87%8F%0A%0A%20%20%20%20%3E%20%E5%85%89%E7%BA%BF%E7%9A%84%E8%A1%B0%E5%87%8F%E5%92%8C%E5%85%89%E6%BA%90%E5%88%B0%E7%89%A9%E4%BD%93%E4%BE%BF%E9%9D%A2%E7%9A%84%E8%B7%9D%E7%A6%BB%E7%9A%84%E4%BA%8C%E6%AC%A1%E6%96%B9%E6%88%90%E5%8F%8D%E6%AF%94%20%0A%20%0A%20%20%20%20%60%60%60GLSL%0A%20%20%20%20a%20%3D%201%2F1%2Bpow(d%2C2)%20%20%20%0A%20%20%20%20%2F%2Fk%E4%B8%BA%E8%A1%B0%E5%87%8F%E7%B3%BB%E6%95%B0%0A%20%20%20%20a%20%3D%201%2F(1%2Bk*power(d%2C2))%0A%20%20%20%20%60%60%60%0A%20%20%20%20%0A%20%20%20%20%0A%20%20*%20%23%23%23%23%20%E5%B9%B3%E8%A1%8C%E5%85%89%0A%20%20%20%20%3E%20%E5%B9%B3%E8%A1%8C%E5%85%89%E5%8F%AF%E7%90%86%E8%A7%A3%E4%B8%BA%E5%85%89%E6%BA%90%E5%9C%A8%E6%97%A0%E7%A9%B7%E8%BF%9C%E7%9A%84%E7%82%B9%E5%85%89%E6%BA%90%2C%E5%9C%A8OpenGL%E4%B8%AD%E5%B9%B3%E8%A1%8C%E5%85%89%E4%B8%8D%E8%80%83%E8%99%91%E8%A1%B0%E5%87%8F%0A%0A%0A%0A%20*%20%23%23%23%23%20%E8%81%9A%E5%85%89%E7%81%AF%0A%20%3E%20%E8%81%9A%E5%85%89%E7%81%AF%E5%92%8C%E7%82%B9%E5%85%89%E6%BA%90%E7%B1%BB%E4%BC%BC%2C%E5%8F%AA%E6%98%AF%E8%81%9A%E5%85%89%E7%81%AF%E5%85%89%E7%85%A7%E8%A2%AB%E9%99%90%E5%88%B6%E5%9C%A8%E4%B8%80%E4%B8%AA%E5%9C%86%E9%94%A5%E5%BD%A2%E7%8A%B6%E5%86%85.%E7%9B%B8%E6%AF%94%E7%82%B9%E5%85%89%E6%BA%90%E5%A4%9A%E5%87%BA%E5%9C%86%E9%94%A5%E4%B8%AD%E7%BA%BF%E6%96%B9%E5%90%91%2C%E5%9C%86%E9%94%A5%E8%A7%92%E5%BA%A6%2C%E8%AE%A1%E7%AE%97%E7%9A%84%E8%BF%87%E7%A8%8B%E5%8F%AA%E9%9C%80%E8%A6%81%E5%BE%97%E5%88%B0%E8%81%9A%E5%85%89%E7%81%AF%E5%88%B0%E9%A1%B6%E7%82%B9%E4%B8%8E%E5%9C%86%E9%94%A5%E4%B8%AD%E7%BA%BF%E6%96%B9%E5%90%91%E7%9A%84%E5%A4%B9%E8%A7%92%E5%B0%8F%E4%BA%8EConeAngle%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E7%82%B9%E5%85%89%E6%BA%90%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%EF%BC%8C%E5%90%A6%E5%88%99%E5%B0%B1%E8%AE%A9%E8%AE%A9%E8%A1%B0%E5%87%8F%E9%87%8F%E6%9C%80%E5%A4%A7%E3%80%82%0A%0A%60%60%60glsl%0A%2F%2F%201.%20%E8%8E%B7%E5%8F%96%E5%9C%86%E9%94%A5%E4%B8%AD%E5%BF%83%E7%BA%BF%E7%9A%84%E6%96%B9%E5%90%91%0Avec3%20coneDirection%20%3D%20normalize(light.coneDirection)%3B%0A%0A%2F%2F%202.%20%E8%8E%B7%E5%8F%96%E9%A1%B6%E7%82%B9%E5%88%B0%E8%81%9A%E5%85%89%E7%81%AF%E7%81%AF%E6%BA%90%E7%9A%84%E6%96%B9%E5%90%91%0Avec3%20rayDirection%20%3D%20-surfaceToLight%3B%0A%0A%2F%2F%203.%E8%AE%A1%E7%AE%97%E4%BA%8C%E8%80%85%E7%9A%84%E8%A7%92%E5%BA%A6%0Afloat%20lightToSurfaceAngle%20%3D%20degrees(acos(dot(rayDirection%2C%20coneDirection)))%0A%0A%2F%2F%204.%20%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9C%A8%E8%81%9A%E5%85%89%E7%81%AF%E7%85%A7%E5%B0%84%E4%B8%8B%EF%BC%8C%E5%A6%82%E6%9E%9C%E8%B6%85%E5%87%BA%EF%BC%8C%E9%82%A3%E4%B9%88%E8%A1%B0%E5%87%8F%E6%9C%80%E5%A4%A7%0Aif(lightToSurfaceAngle%20%3E%20light.coneAngle)%7B%0A%20%20attenuation%20%3D%200.0%3B%0A%7D%0A%60%60%60%0A%0A%0A%5B%E8%81%9A%E5%85%89%E7%81%AF%5D(https%3A%2F%2Fblog.csdn.net%2Fwudiliyao%2Farticle%2Fdetails%2F80750630)%0A%5B%E5%85%89%E7%85%A7%5D(https%3A%2F%2Fblog.csdn.net%2Fcsxiaoshui%2Farticle%2Fdetails%2F53332647)%0A%0A-%20https%3A%2F%2Fwww.cnblogs.com%2FStrayWolf%2Farticles%2F6849725.html%0A%0A*%20%23%23%23%23%23%20%20ProList%20%0A*%20%5B%20%5D%20%20%E5%A6%82%E4%BD%95%E8%A7%A3%E9%87%8A%20diffuseColor%0A%0A%20%20%20%20%0A%0A%20%20%20%0A%0A</center></body></html>
